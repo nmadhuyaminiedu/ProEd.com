@@ -1,0 +1,6 @@
+---
+title: "References"
+---
+
+1.  [Default of credit card clients - UCI Machine Learning Repository. (n.d.).](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
+2.  [Prabhakaran, S. (n.d.). Logistic regression with R.](https://r-statistics.co/Logistic-Regression-With-R.html)

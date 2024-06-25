@@ -1,0 +1,13 @@
+---
+title: "Introduction"
+---
+
+For our final project in "Applied Statistics and Visualization for Analytics," we conducted a "**Credit Card Default Analysis.**" Our team, consisting of three members—Pravalika, Sowdhamini, and myself—aimed to analyze a dataset titled "Default of Credit Card Clients" which will provide insights into the patterns and factors influencing credit card default occurrences, aiding in risk assessment and decision-making in the financial domain.
+
+The primary objectives of the analysis are:
+
+-   Certain demographic groups exhibit a higher or lower likelihood of defaulting on credit card payments
+
+-   The most important features for predicting credit default risk
+
+-   Distinct patterns of credit limit utilization among users.

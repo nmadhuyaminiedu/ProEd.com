@@ -1,0 +1,17 @@
+---
+title: "Introduction"
+---
+
+For our mid-term project in "Applied Statistics and Visualization for Analytics," Sowdhamini and I worked as a team. This project focused on redesigning two poorly constructed graphs to ensure accurate data representation. We prioritized key elements such as clear data presentation, simple design, consistent scaling, and appropriate labels and titles. Embedded code for each redesign is provided for reference.
+
+-   The first poorly constructed graph, originally a stacked bar chart, has been redesigned into a simplified bar chart and a juxtaposed chart.
+
+-   The second poorly constructed graph, initially a bubble chart, has been redesigned into a simplified bar chart and a scatter plot.
+
+![](pic2.jpg){fig-align="center" width="396" height="269"}
+
+Working on this project was an exciting journey for us as we got an opportunity to explore and gain hands-on learning on the topics we learnt so far.
+
+Feel free to watch the YouTube link: [*STAT Mid Project*](https://youtu.be/QVRpvHkwhNI)
+
+[Madhu Yamini Nainala](https://github.com/nmadhuyaminiedu)

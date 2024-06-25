@@ -1,0 +1,96 @@
+---
+title: "Code & Implementation"
+---
+
+![**Canadian National Broadcast Company showing their sources of funding in two financial years.**](Bad%20Graph%201.jpg){fig-align="center" width="423"}
+
+# Redesign 1
+
+```{r message=FALSE}
+library(tidyverse)
+library(plotly)
+library(lattice)
+```
+
+```{r}
+Sources_of_Funding <- c('Government_Funding', 'Revenue', 'Financing_and_Other_Income',
+       'Subscriber_Fees', 'Advertising', 'Digital', 'Television')
+
+Year1_Funding <- c(1207.7,573.1,126.6,127.2,318.3,42.6,275.7)
+Year2_Funding <- c(1213.7,490.1,116.9,124.4,248.8,31.0,217.8)
+
+m <- list(
+  l = 50,
+  r = 50,
+  b = 50,
+  t = 70
+)
+```
+
+```{r}
+Funding <- data.frame(Sources_of_Funding, Year1_Funding, Year2_Funding)
+Funding
+```
+
+```{r}
+Plot1 = plot_ly(Funding, y = ~Sources_of_Funding, x = ~Year1_Funding, type = 'bar', name = '2017-2018',marker=list(color = 'red')) %>% 
+    add_trace(x = ~Year2_Funding, name = '2018-2019', 
+              marker = list(color = 'blue')) %>%
+    layout(title= list(text="<b> Canadian National Broadcast Company showing\ntheir sources of funding in two financial years. </b>",x=0.5,y=0.9,xanchor='center',yanchor='top'),font=list(size=10))  %>%
+    layout(legend= list(title=list(text='<i><b>Year</b></i>'),x=100,y=0.5),
+           xaxis = list(title = "<b>Funds in Millions<b>",
+                   tick0=0, dtick=250,font=list(size=8.5)),
+           yaxis = list(title = "<b>Source of Funding</b>",font=list(size=8.5)),
+           margin = m,
+           barmode='group')
+
+Plot1
+```
+
+# Redesign 2
+
+```{r}
+Year                       <- c("2017-2018", "2018-2019")
+Government_Funding         <- c(1207.7, 1213.7)
+Revenue	                   <- c(573.1, 490.1)
+Financing_and_Other_Income <- c(126.6, 116.9)
+Subscriber_Fees            <- c(127.2, 124.4)
+Advertising	               <- c(318.3, 248.8)
+Digital                    <- c(42.6, 31.0)
+Television                 <- c(275.7, 217.8)
+```
+
+```{r}
+mat <- data.frame(Year, Government_Funding,Revenue,Financing_and_Other_Income,Subscriber_Fees,Advertising,Digital,Television)
+mat 
+```
+
+```{r}
+Funds = gather(mat,key = Source_of_Funding,value = Funding,Government_Funding:Television,factor_key = T)
+Funds
+```
+
+```{r}
+Plot2 = ggplot(Funds, aes(x= Funding,y=Year,fill=Source_of_Funding,group = Source_of_Funding)) +
+  geom_point(shape = 21, size = 1.5) + 
+  geom_line(aes(color = Source_of_Funding)) +
+  labs(title="Canadian National Broadcast Company showing their sources of\nfunding in two financial years.",fill="Source of Funding",x="Funds in Millions",y="Year")+
+  scale_x_continuous(breaks=seq(0,1250,by=150)) + 
+  theme(legend.position ="none",
+        plot.margin = margin(t = 25,  
+                             r = 5,  
+                             b = 5,  
+                             l = 6),
+        plot.title=element_text(size=10,face="bold",hjust=0.5),
+        axis.text=element_text(size=6),
+        axis.title=element_text(size=8.5,face="bold"))+
+  facet_wrap(~Source_of_Funding)
+
+Plot2
+```
+
+Using ggplotly to make the above graph interactive.
+
+```{r}
+ggplotly(Plot2)
+```

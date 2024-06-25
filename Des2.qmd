@@ -1,0 +1,70 @@
+---
+title: "Graph - Redesigns"
+---
+
+![](Bad%20Graph%202.jpg){fig-align="center" width="431"}
+
+Let us proceed with the second graph. The above bubble chart is trying to give us information regarding the Top 10 Films by Worldwide Grosses. It shows the names of the Films, Year - the film has released and its Production Budget. But there are a few issues with the above chart.
+
+-   Usually bubble charts are a way of evaluating the relationship between data points visually. In the above chart, there is no relationship found between the bubbles. If the bubbles were not labelled, drawing conclusions by the size of the bubbles might be difficult.
+
+-   Even though the Star Wars: Episode I-The Phantom Menace film’s production budget is equal to the production budget of the film Shrek 2, the placement of the bubbles in the above chart is uneven.
+
+But the graph can be redesigned in a proper way for a better understanding and the best way of visual representation is a bar plot.
+
+# Redesign 1
+
+In the first redesign, we are plotting a bar graph using ggplotly to perform interactive data visualization.
+
+```{r echo=FALSE,message=FALSE}
+library(ggplot2)
+library(plotly)
+
+Year_of_Release <- c("1997","1999","2001","2002","2003","2004","2006","2007","2007","2008")
+
+Film <- c("Titanic",
+          "Star Wars:Episode I-The Phantom Menace",
+          "Harry Potter and the Sorcerer's Stone",
+          "The Lord of Rings:The Two Towers",
+          "The Lord of Rings:The Return of the King",
+          "Shrek 2",
+          "Pirates of the Carribean:Dead Man's Chest",
+          "Pirates of the Carribean:At World's End",
+          "Harry Potter and the Order of the Phoenix",
+          "The Dark Knight")
+
+Production_Budget <- c(1.84,0.92,0.98,0.93,1.12,0.92,1.07,0.96,0.94,0.95)
+
+filmdata <- data.frame(Year_of_Release,Film,
+                       Production_Budget)
+
+Plot3 = ggplot(filmdata, aes( x=Year_of_Release,y=Production_Budget))+
+  geom_bar(stat = "identity", color="black",aes(fill = Film),position = "dodge")+
+  scale_y_continuous(limits=c(0,2))+
+  labs(x ="Release Year",y="Production Budget in Billions",title ="Top 10 Films by Worldwide Grosses")+
+  scale_fill_manual(values = c(rgb(0,0.3,0),"grey","yellow","skyblue","orange","blue","purple","green","pink","red"))+
+  theme(legend.text=element_text(size=8,face="italic"),
+        legend.title=element_text(size=8.5,face="bold"),
+        plot.title=element_text(size=10,face="bold",hjust=0.5),
+        axis.title=element_text(size=8.5,face="bold"))
+
+ggplotly(Plot3)
+```
+
+# Redesign 2
+
+The below graph is the second redesign for the above bubble chart. We are plotting an interactive scatter plot using ggplotly where each point in the graph represents a Film.
+
+```{r echo=FALSE,message=FALSE}
+Plot4 = ggplot(filmdata, aes(x = Year_of_Release, y = Production_Budget)) + 
+  geom_point(aes(color = Film))+
+  scale_y_continuous(limits = c(0,2), breaks = seq(0,2,.1))+
+  labs(x ="Release Year",y="Production Budget in Billions",title ="Top 10 Films by Worldwide Grosses")+
+  scale_color_manual(values = c(rgb(0,0.5,0),"maroon","yellow","skyblue","orange","blue","purple","green","pink","red"))+
+  theme(legend.text=element_text(size=8,face="italic"),
+        legend.title=element_text(size=8.5,face="bold"),
+        plot.title=element_text(size=10,face="bold",hjust=0.5),
+        axis.title=element_text(size=8.5,face="bold"))
+
+ggplotly(Plot4)
+```

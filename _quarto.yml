@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "ProEd.com"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Credit Card Default Analysis"
+        contents:
+          - about.qmd
+          - index.qmd
+          - Research.qmd
+          - Codes.qmd
+          - References.qmd
+      - section: "Redesignings"
+        contents:
+          - index2.qmd
+          - section: "Graph 1"
+            contents:
+              - Des1.qmd
+              - Graph 1.qmd
+          - section: "Graph 2" 
+            contents: 
+              - Des2.qmd
+              - Graph 2.qmd
+          - Ref.qmd
+  navbar:
+    left:
+      - href: home.qmd
+        text: Home
+    tools:
+      - icon: github
+        href: https://github.com/nmadhuyaminiedu
+      
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+

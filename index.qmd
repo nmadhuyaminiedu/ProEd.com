@@ -1,0 +1,239 @@
+---
+title: "Dataset"
+---
+
+The dataset named 'Default of Credit Card Clients' comprises information pertaining to credit card holders in 2005 at Taiwan, encompassing various demographic and financial attributes. Each entry is uniquely identified by an ID. The dataset includes the credit limit (LIMIT_BAL) assigned to each individual, their gender (SEX), level of education (EDUCATION), marital status (MARRIAGE), and age. Additionally, it contains details on the repayment status (PAY_0 to PAY_6) over the past six months and it's scale: -1 = pay duly; 1 = payment delay for one month; 2 = payment delay for two months; ...; 8 = payment delay for eight months; 9 = payment delay for nine months and above., bill amounts (BILL_AMT1 to BILL_AMT6), and payment amounts (PAY_AMT1 to PAY_AMT6) during the same period. The final column indicates whether the individual defaulted on their payment in the following month (default payment next month). This dataset holds potential for comprehensive analyses to discern patterns in credit card usage, repayment behavior, and factors influencing default occurrences among different demographic groups.
+
+Source: [Default of credit card clients - UCI Machine Learning Repository. (n.d.). https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
+
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| Column Names               | Type                          | Description                                                                         | Modified Column Names      |
++:===========================+:==============================+:====================================================================================+:===========================+
+| ID                         | Categorical/Numerical         | Unique identifier for each credit card holder.                                      | ID                         |
+|                            |                               |                                                                                     |                            |
+|                            | (Identifier)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| LIMIT_BAL                  | Numerical                     | Credit limit assigned to each credit card holder.                                   | Limited_Bal                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| SEX                        | Categorical                   | Gender of each credit card holder.                                                  | Gender                     |
+|                            |                               |                                                                                     |                            |
+|                            | (Male/Female)                 |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| EDUCATION                  | Categorical                   | Educational level of each credit card holder.                                       | Education                  |
+|                            |                               |                                                                                     |                            |
+|                            | (University/Grad/High_school/ |                                                                                     |                            |
+|                            |                               |                                                                                     |                            |
+|                            | Others/PG/Advanced_degree)    |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| MARRIAGE                   | Categorical                   | Marital status of each credit card holder.                                          | Marriage                   |
+|                            |                               |                                                                                     |                            |
+|                            | (Married/Single/Others)       |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| AGE                        | Numerical                     | Age of each credit card holder.                                                     | Age                        |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_0                      | Categorical                   | Repayment status in September                                                       | Repay_Sept                 |
+|                            |                               |                                                                                     |                            |
+|                            | (Ordinal)                     |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_2                      | Categorical                   | Repayment status in August                                                          | Repay_Aug                  |
+|                            |                               |                                                                                     |                            |
+|                            | (Ordinal)                     |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_3                      | Categorical                   | Repayment status in July                                                            | Repay_Jul                  |
+|                            |                               |                                                                                     |                            |
+|                            | (Ordinal)                     |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_4                      | Categorical                   | Repayment status in June                                                            | Repay_Jun                  |
+|                            |                               |                                                                                     |                            |
+|                            | (Ordinal)                     |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_5                      | Categorical                   | Repayment status in May                                                             | Repay_May                  |
+|                            |                               |                                                                                     |                            |
+|                            | (Ordinal)                     |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_6                      | Categorical                   | Repayment status in April                                                           | Repay_Apr                  |
+|                            |                               |                                                                                     |                            |
+|                            | (Ordinal)                     |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| BILL_AMT1                  | Numerical                     | Bill statement in September                                                         | Billpay_Sept               |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| BILL_AMT2                  | Numerical                     | Bill statement in August                                                            | Billpay_Aug                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| BILL_AMT3                  | Numerical                     | Bill statement in July                                                              | Billpay_Jul                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| BILL_AMT4                  | Numerical                     | Bill statement in June                                                              | Billpay_Jun                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| BILL_AMT5                  | Numerical                     | Bill statement in May                                                               | Billpay_May                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| BILL_AMT6                  | Numerical                     | Bill statement in April                                                             | Billpay_Apr                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_AMT1                   | Numerical                     | Amount paid in September                                                            | Amtpaid_Sept               |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_AMT2                   | Numerical                     | Amount paid in August                                                               | Amtpaid_Aug                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_AMT3                   | Numerical                     | Amount paid in July                                                                 | Amtpaid_Jul                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_AMT4                   | Numerical                     | Amount paid in June                                                                 | Amtpaid_Jun                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_AMT5                   | Numerical                     | Amount paid in May                                                                  | Amtpaid_May                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| PAY_AMT6                   | Numerical                     | Amount paid in April                                                                | Amtpaid_Apr                |
+|                            |                               |                                                                                     |                            |
+|                            | (Continuous)                  |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+| default payment next month | Categorical                   | Indicates whether the individual defaulted on their payment in the following month. | default_payment_next_month |
+|                            |                               |                                                                                     |                            |
+|                            | (Default/Not Default)         |                                                                                     |                            |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------+----------------------------+
+
+: ***Structure & Description***
+
+#### **Data Analysis:**
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(dplyr)
+library(tidyselect)
+library(tidyverse)
+library(plotly)
+
+# Set the file path
+file_path <- "C:\\Users\\nmadh\\OneDrive\\Desktop\\Credit card defaults .csv"
+
+# Read the CSV file, excluding the first row
+data <- read.csv(file_path, skip = 1)
+
+# Define the new column names
+new_column_names <- c("ID", "Limited_Bal", "Gender", "Education", "Marriage", "Age", "Repay_Sept", "Repay_Aug", "Repay_Jul", "Repay_Jun", "Repay_May", "Repay_Apr", "Billpay_Sept", "Billpay_Aug", "Billpay_Jul", "Billpay_Jun", "Billpay_May", "Billpay_Apr", "Amtpaid_Sept", "Amtpaid_Aug", "Amtpaid_Jul", "Amtpaid_Jun", "Amtpaid_May", "Amtpaid_Apr", "default_payment_next_month")
+
+# Rename the columns
+colnames(data) <- new_column_names
+
+# Define the new order of columns
+new_column_order <- c("ID", "Limited_Bal", "Gender", "Education", "Marriage", "Age", "Repay_Apr", "Repay_May", "Repay_Jun", "Repay_Jul", "Repay_Aug", "Repay_Sept","Billpay_Apr", "Billpay_May", "Billpay_Jun", "Billpay_Jul", "Billpay_Aug", "Billpay_Sept", "Amtpaid_Apr", "Amtpaid_May", "Amtpaid_Jun", "Amtpaid_Jul", "Amtpaid_Aug", "Amtpaid_Sept", "default_payment_next_month")
+
+# Reorder the columns
+final_data <- select(data, all_of(new_column_order))
+
+final_data <- final_data %>%
+  mutate(Gender = recode(Gender,
+                            "1" = "Male",
+                            "2" = "Female"))
+
+# Recode Education column based on the specified mapping
+final_data <- final_data %>%
+  mutate(Education = recode(Education,
+                            "0" = "Unknown",
+                            "1" = "Grad",
+                            "2" = "University",
+                            "3" = "High_school",
+                            "4" = "Others",
+                            "5" = "PG",
+                            "6" = "Advanced_degree"))
+
+final_data <- final_data %>%
+  mutate(Marriage = recode(Marriage,
+                           "0" = "Unknown",
+                           "1" = "Married",
+                           "2" = "Single",
+                           "3" = "Others"))
+
+final_data <- final_data %>%
+  mutate(default_payment_next_month = recode(default_payment_next_month,
+                           "0" = "Not Default",
+                           "1" = "Default"))
+
+final_data$Repay_Apr <- as.factor(final_data$Repay_Apr)
+final_data$Repay_May <- as.factor(final_data$Repay_May)
+final_data$Repay_Jun <- as.factor(final_data$Repay_Jun)
+final_data$Repay_Jul <- as.factor(final_data$Repay_Jul)
+final_data$Repay_Aug <- as.factor(final_data$Repay_Aug)
+final_data$Repay_Sept <- as.factor(final_data$Repay_Sept)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+plot1 = ggplot(final_data, aes(x = Age, y = Limited_Bal)) +
+  geom_point() +
+  geom_smooth(aes(color = Education)) +
+  scale_color_manual(values = c("High_school" = "yellow", "University" =   "brown","Grad" = "green", "Others" = "purple", "Advanced_degree" = "red", "PG" = "blue", "Unknown" = "darkgreen")) +
+  labs(title = "Relationship between Age and Limited Balance by Education", 
+       x = "Age (years)", y = "Credit Limit", color = "Education") + 
+  theme(legend.position ="none",
+        plot.margin = margin(t = 25,  
+                             r = 5,  
+                             b = 5,  
+                             l = 6),
+        plot.title=element_text(size=10,face="bold",hjust=0.5),
+        axis.text=element_text(size=6),
+        axis.title=element_text(size=8.5,face="bold"))+
+  facet_wrap(~Education) 
+
+ggplotly(plot1)
+```
+
+The above graph showcases a structured presentation of demographic data, specifically focusing on the intersection of age and educational attainment. The "Education" column categorizes individuals into groups like "Advanced_degree", "Grad", "High_school", "PG (Post Graduation)", "Others". X-axis represents the age and Y-axis represents the credit limit of the individuals. The information can potentially be utilized to understand the educational demographics within certain age groups and to inform their respective credit limits.
+
+The graph provides an interpretation of a scatter plot with smooth trend lines depicting the relationship between age and credit limit across various educational backgrounds. It breaks down the trends observed in the data for each educational category and age group, highlighting how credit limits change with age within each educational group. The interpretation considers factors such as career trajectories, earning potential associated with different levels of education, and the variance in credit limits within each category. It also discusses the statistical methods used, such as smooth lines, to reveal overall trends while minimizing the influence of individual data points. Overall, the visualization offers valuable insights into the impact of educational background on financial credibility, aiding both financial institutions in assessing credit risk and individuals in understanding their financial standing relative to their education level.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Histogram of Age
+plot2 = ggplot(final_data, aes(x = Age)) +
+  geom_histogram(binwidth = 5, fill = "skyblue", color = "black") +
+  labs(title = "Distribution of Age",
+       x = "Age",
+       y = "Frequency")
+ggplotly(plot2)
+```
+
+The histogram of age distribution in the dataset reveals several important insights. Firstly, it highlights a concentration of individuals in their late 20s to early 40s, likely representing those in the midst of their careers. Secondly, it shows a right-skewed distribution, indicating a predominance of younger individuals, which could suggest a younger population or a higher propensity for credit among the younger demographic. Thirdly, the histogram's use of 5-year bins effectively visualizes age distribution without oversimplification, with the highest frequency bars clustered around 25 to 35 years. Fourthly, the implications for financial products are significant, as institutions may tailor offerings and marketing strategies to cater to the economically active age group. Lastly, lower frequencies among older age groups prompt considerations for how financial services are tailored, particularly in regions with varying age demographics. Overall, the distribution underscores the importance of understanding age dynamics in shaping credit risk assessment, product design, and marketing strategies within the financial sector.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Bar plot of Gender
+plot3=ggplot(final_data, aes(x = Gender)) +
+  geom_bar(fill = "skyblue", color = "black") +
+  labs(title = "Distribution of Gender",
+       x = "Gender",
+       y = "Count")
+ggplotly(plot3)
+```
+
+The bar chart illustrates the gender distribution within the dataset, revealing a higher representation of females compared to males. This suggests potential gender-based differences in credit application or dataset composition. The visualization's simplicity aids in comparing gender counts effectively. Financial institutions can leverage this insight to tailor services and marketing strategies to better suit the demographic composition.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Bar plot of default_payment_next_month
+ggplot(final_data, aes(x = default_payment_next_month, fill = default_payment_next_month)) +
+  geom_bar() +
+  labs(title = "Default Payment Status",
+       x = "Default Payment Next Month",
+       y = "Count") +
+  theme(legend.position = "none")
+```
+
+The bar chart depicts the distribution of default payment status for the next month, highlighting a majority of individuals expected not to default. This insight is vital for risk management, allowing financial institutions to tailor strategies to mitigate default risk effectively. The visualization's clarity, with color-coded bars and direct labeling, facilitates easy comprehension of default status distribution. It informs business strategies such as provisioning for bad debts and designing credit products, ultimately aiding in strategic planning and operational adjustments in financial services.

@@ -1,0 +1,19 @@
+---
+title: References
+---
+
+***Graph 1 Reference:***
+
+[*Raj, A. (2023b, May 28). 12 Bad data visualization examples explained - Code conquest. Code Conquest.*](https://www.codeconquest.com/blog/12-bad-data-visualization-examples-explained/)
+
+***Graph 2 Reference:***
+
+[*Clayton, T., & Clayton, T. (2021b, June 22). 15 misleading data visualization examples. Rigorous Themes.*](https://rigorousthemes.com/blog/misleading-data-visualization-examples/ "Graph 1 link")
+
+***Other References (for code and implementation):***
+
+-   [*Dr. Isuru Dassanayake week 4*](https://mymasonportal.gmu.edu/bbcswebdav/pid-18986087-dt-content-rid-302922167_1/courses/22456.202410/Redesign_examples.html)
+
+-   [*Dr. Isuru Dassanayake week 6*](https://mymasonportal.gmu.edu/bbcswebdav/pid-18986099-dt-content-rid-302921600_1/courses/22456.202410/Interactive-graphs_plotly%281%29.html)
+
+-   [*Quarto - about pages. (n.d.). Quarto.*](https://quarto.org/docs/websites/website-about.html#links)
